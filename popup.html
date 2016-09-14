@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TabSaver</title>
+
+    <meta charset="UTF-8">
+	<meta name="application-name" content="TabSaver">
+	<meta name="author" content="Martin Green">
+	<meta name="copyright" content="&copy;2016" />
+	<meta name="description" content="Save old tabs for later and free up memory">
+
+    <script src="popup.js"></script>
+    <style type="text/css">
+        body {
+            color: #EEE;
+            background: #78B9EB;
+        }
+        h1, h3 {
+            margin: 8px 4px;
+            color: #FFF;
+        }
+
+        div { float: left; }
+        a { color: #EEE; }
+        img { vertical-align: bottom; }
+
+        table {
+            color: #EEE;
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            padding: 5px;
+            text-align: left;
+            border-top: 1px solid #CDE;
+            border-bottom: 1px solid #CDE;
+        }
+        tr:hover { background-color: #5A8BB0; }
+
+        .button {
+            background-color: #3C5D76;
+            border: 1px solid #3C5D76;
+            border-radius: 3px;
+            height: 28px;
+            line-height: 0px;
+            color: #CDCDD0;
+            font-family: arial,sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            margin-right: 10px;
+            min-width: 75px;
+            padding: 0px 15px;
+            text-align: center;
+        }
+        .button:hover { color: #DEF; }
+
+        #logo {
+            float: right;
+            width: 175px;
+            margin-right: 10px;
+        }
+        #controls {
+            width: 215px;
+            padding-bottom: 10px;
+        }
+        #credit {
+            padding: 4px;
+            font-size: 10px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div style="width:400px;">
+        <!-- Header -->
+        <div id="logo"><h1>TabSaver <img src="logo50.png"></h1></div>
+        <div id="controls">
+            <h3 id="curTab"></h3>
+            <div id="button_div">
+                <input id="save_button" class="button" type="button" value="Save" />
+            </div>
+
+            <div id="button_div">
+                <input id="delete_button" class="button" type="button" value="Error" />
+            </div>
+        </div>
+
+        <!-- Create table here -->
+        <div>
+            <table id="table">
+                <tbody id="tabs">
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Attribution div -->
+        <div id="credit">
+            Logo by <a href="http://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a> licensed <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        </div>
+    </div>
+  </body>
+</html>
